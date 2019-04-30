@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.30)  26 APR 2019 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.30)  30 APR 2019 10:26
 entering extended mode
 **./machine-learning-workshop.tex
 (machine-learning-workshop.tex
@@ -1052,118 +1052,164 @@ LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <5> not available
 (Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 132.
  [2
 
-] [3
+]
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 141.
+ [3
 
 ] [4
 
 ]
-LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 246.
-
 [5
 
 ] [6
 
+] [7
+
+] [8
+
 ]
-<../figures/1d_pattern_supervised_learning_1.png, id=69, 150.5625pt x 401.5pt>
+<../figures/1d_pattern_supervised_learning_1.png, id=90, 150.5625pt x 401.5pt>
 File: ../figures/1d_pattern_supervised_learning_1.png Graphic file (type png)
 
 <use ../figures/1d_pattern_supervised_learning_1.png>
 Package pdftex.def Info: ../figures/1d_pattern_supervised_learning_1.png used o
-n input line 289.
+n input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_pattern_supervised_learning_2.png, id=70, 150.5625pt x 401.5pt>
+<../figures/1d_pattern_supervised_learning_2.png, id=91, 150.5625pt x 401.5pt>
 File: ../figures/1d_pattern_supervised_learning_2.png Graphic file (type png)
 
 <use ../figures/1d_pattern_supervised_learning_2.png>
 Package pdftex.def Info: ../figures/1d_pattern_supervised_learning_2.png used o
-n input line 289.
+n input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_pattern_supervised_learning_3.png, id=71, 150.5625pt x 401.5pt>
+<../figures/1d_pattern_supervised_learning_3.png, id=92, 150.5625pt x 401.5pt>
 File: ../figures/1d_pattern_supervised_learning_3.png Graphic file (type png)
 
 <use ../figures/1d_pattern_supervised_learning_3.png>
 Package pdftex.def Info: ../figures/1d_pattern_supervised_learning_3.png used o
-n input line 289.
+n input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_pattern_supervised_learning_4.png, id=72, 150.5625pt x 401.5pt>
+<../figures/1d_pattern_supervised_learning_4.png, id=93, 150.5625pt x 401.5pt>
 File: ../figures/1d_pattern_supervised_learning_4.png Graphic file (type png)
 
 <use ../figures/1d_pattern_supervised_learning_4.png>
 Package pdftex.def Info: ../figures/1d_pattern_supervised_learning_4.png used o
-n input line 289.
+n input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_random_supervised_learning_1.png, id=73, 150.5625pt x 401.5pt>
+<../figures/1d_random_supervised_learning_1.png, id=94, 150.5625pt x 401.5pt>
 File: ../figures/1d_random_supervised_learning_1.png Graphic file (type png)
 
 <use ../figures/1d_random_supervised_learning_1.png>
 Package pdftex.def Info: ../figures/1d_random_supervised_learning_1.png used on
- input line 289.
+ input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_random_supervised_learning_2.png, id=74, 150.5625pt x 401.5pt>
+<../figures/1d_random_supervised_learning_2.png, id=95, 150.5625pt x 401.5pt>
 File: ../figures/1d_random_supervised_learning_2.png Graphic file (type png)
 
 <use ../figures/1d_random_supervised_learning_2.png>
 Package pdftex.def Info: ../figures/1d_random_supervised_learning_2.png used on
- input line 289.
+ input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_random_supervised_learning_3.png, id=75, 150.5625pt x 401.5pt>
+<../figures/1d_random_supervised_learning_3.png, id=96, 150.5625pt x 401.5pt>
 File: ../figures/1d_random_supervised_learning_3.png Graphic file (type png)
 
 <use ../figures/1d_random_supervised_learning_3.png>
 Package pdftex.def Info: ../figures/1d_random_supervised_learning_3.png used on
- input line 289.
+ input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_random_supervised_learning_4.png, id=76, 150.5625pt x 401.5pt>
+<../figures/1d_random_supervised_learning_4.png, id=97, 150.5625pt x 401.5pt>
 File: ../figures/1d_random_supervised_learning_4.png Graphic file (type png)
 
 <use ../figures/1d_random_supervised_learning_4.png>
 Package pdftex.def Info: ../figures/1d_random_supervised_learning_4.png used on
- input line 289.
+ input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
 
-<../figures/1d_pattern_supervised_learning_5.png, id=77, 150.5625pt x 401.5pt>
+<../figures/1d_pattern_supervised_learning_5.png, id=98, 150.5625pt x 401.5pt>
 File: ../figures/1d_pattern_supervised_learning_5.png Graphic file (type png)
 
 <use ../figures/1d_pattern_supervised_learning_5.png>
 Package pdftex.def Info: ../figures/1d_pattern_supervised_learning_5.png used o
-n input line 289.
+n input line 322.
 (pdftex.def)             Requested size: 34.23161pt x 91.28319pt.
- [7
+ [9
 
  <../figures/1d_pattern_supervised_learning_1.png> <../figures/1d_pattern_super
 vised_learning_2.png> <../figures/1d_pattern_supervised_learning_3.png> <../fig
 ures/1d_pattern_supervised_learning_4.png> <../figures/1d_random_supervised_lea
 rning_1.png> <../figures/1d_random_supervised_learning_2.png> <../figures/1d_ra
 ndom_supervised_learning_3.png> <../figures/1d_random_supervised_learning_4.png
-> <../figures/1d_pattern_supervised_learning_5.png>] [8
+> <../figures/1d_pattern_supervised_learning_5.png>] [10
 
 ]
-<../figures/clustering.png, id=99, 520.8258pt x 382.3083pt>
+<../figures/clustering.png, id=119, 520.8258pt x 382.3083pt>
 File: ../figures/clustering.png Graphic file (type png)
 
 <use ../figures/clustering.png>
-Package pdftex.def Info: ../figures/clustering.png used on input line 314.
+Package pdftex.def Info: ../figures/clustering.png used on input line 347.
 (pdftex.def)             Requested size: 273.83728pt x 201.01236pt.
- [9
+ [11
 
- <../figures/clustering.png>] [10
+ <../figures/clustering.png>] [12
+
+] [13
+
+]
+[14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
+] [19
+
+] [20
+
+] [21
+
+]
+<../figures/elephant.png, id=182, 401.5pt x 303.1325pt>
+File: ../figures/elephant.png Graphic file (type png)
+
+<use ../figures/elephant.png>
+Package pdftex.def Info: ../figures/elephant.png used on input line 496.
+(pdftex.def)             Requested size: 171.14764pt x 129.22044pt.
+ [22
+
+ <../figures/elephant.png>] [23
+
+] [24
+
+] [25
+
+]
+[26
+
+] [27
+
+] [28
+
+] [29
 
 ]
 File: ../figures/refuel_logo_with_text.png Graphic file (type png)
-
-<use ../figures/refuel_logo_with_text.png>
+ <use ../figures/refuel_logo_with_text.png>
 Package pdftex.def Info: ../figures/refuel_logo_with_text.png used on input lin
-e 355.
+e 619.
 (pdftex.def)             Requested size: 239.60567pt x 173.51505pt.
- [11
+ [30
 
 ]
 \tf@nav=\write6
@@ -1175,36 +1221,41 @@ e 355.
 \tf@snm=\write8
 \openout8 = `machine-learning-workshop.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
- (machine-learning-workshop.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 624.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 624.
+
+(machine-learning-workshop.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 624.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 624.
 Package rerunfilecheck Info: File `machine-learning-workshop.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: 3EEE054769B8E450617E078FC479B251;164.
  ) 
 Here is how much of TeX's memory you used:
- 21548 strings out of 493333
- 429949 string characters out of 3139185
- 496056 words of memory out of 3000000
- 24554 multiletter control sequences out of 15000+200000
- 20326 words of font info for 53 fonts, out of 3000000 for 9000
+ 21621 strings out of 493333
+ 430394 string characters out of 3139185
+ 499000 words of memory out of 3000000
+ 24588 multiletter control sequences out of 15000+200000
+ 20336 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,62p,793b,652s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\
 dpi720\ebbx10.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\p
 ublic\cmbright\dpi720\ebmr10.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\public\cmbright\dpi600\ebmr10.pk> <C:\Users\jschmidt\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbras8.pk> <C:\Users\jschm
-idt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbras8.pk>
- <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dp
-i600\ebmr8.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\publ
-ic\cmbright\dpi657\ebmr10.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\public\cmbright\dpi864\ebmr10.pk>
-Output written on machine-learning-workshop.pdf (11 pages, 806313 bytes).
+nts\pk\ljfour\public\cmbright\dpi657\ebbx10.pk> <C:\Users\jschmidt\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrmi10.pk> <C:\Users\jsch
+midt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\cmbrsy10.p
+k> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\
+dpi657\ebmo10.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\p
+ublic\cmbright\dpi600\cmbras8.pk> <C:\Users\jschmidt\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\public\cmbright\dpi600\ebmr8.pk> <C:\Users\jschmidt\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi657\ebmr10.pk> <C:\Users\jschmi
+dt\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi864\ebmr10.pk><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
+Output written on machine-learning-workshop.pdf (30 pages, 872431 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 516 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
