@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Contents}{2}{0}{1}
-\beamer@sectionintoc {2}{The basic concept of machine learning}{6}{0}{2}
-\beamer@sectionintoc {3}{Terminology}{8}{0}{3}
