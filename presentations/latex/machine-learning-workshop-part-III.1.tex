@@ -88,10 +88,13 @@
 
 \setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
 
-\title[reFUEL - Machine Learning]{Validating the Global Power Plant Database with Automatized Recognition of Wind Turbines on Google Maps}
-\author{Johannes Schmidt}
-\institute{University of Natural Resources and Life Sciences, Vienna}
-\date{20.03.2019}
+\title[Workshop - Machine Learning]{ Don't believe the hype? A hands-on introduction to machine-learning in Python - Part III.1}
+\subtitle{Open Workshops on Computer Based Systems Modelling}
+
+\author{Johannes Schmidt, Johann Baumgartner}
+\institute{Institute for Sustainable Economic Development, BOKU, Vienna}
+\date{7.05.2019}
+
 \begin{document}
 
 {
@@ -115,62 +118,6 @@
 %\begin{frame}{Outline}
 %  \tableofcontents
 %\end{frame}
-
-\section{Introduction}
-
-\begin{frame}{Introduction to reFUEL (I)}
-
-\center{
-\includegraphics[width=\linewidth]{../figures/Figure1.png}
-}
-%\begin{itemize}
-%  \item reFUEL 
-%  \item Use \texttt{itemize} to organize your main points.
-%\end{itemize}
-
-%\vskip 1cm
-
-%\begin{block}{Examples}
-%Some examples of commonly used commands and features are included, to help you get started.
-%\end{block}
-
-\end{frame}
-
-%\section{Some \LaTeX{} Examples}
-
-%\subsection{Tables and Figures}
-
-\begin{frame}{Introduction to reFUEL (II)}
-
-\begin{enumerate}
-\item Assess global bio-physical potentials of renewable energies (wind and PV) and associated synthetic fuel production
-\item Assess options for spatial arbitrage by trade
-\item Understand associated \textit{land-use issues}
-\item Look into \textit{past} land-use change caused by renewable energy development
-
-\end{enumerate}
-
-% Commands to include a figure:
-%\begin{figure}
-%\includegraphics[width=\textwidth]{your-figure's-file-name}
-%\caption{\label{fig:your-figure}Caption goes here.}
-%\end{figure}
-\
-%\begin{table}
-%\label{tab:widgets}
-%\caption{An Example table}
-%\begin{tabular}{l l l}
-%\midrule
-%Apples & 1 & 2 \\
-%\midrule
-%\color{Green}Oranges &\color{Green} 3& \color{Green}4
-%\end{tabular}
-%\end{table}
-
-
-
-\end{frame}
-
 %\subsection{Mathematics}
 
 \begin{frame}{Global Power Plant Database: Need for Validation}
@@ -296,16 +243,59 @@ Negatives
 
 
 \begin{frame}
-\frametitle{Learn}
-\framesubtitle{Unfreezing prelearned Neural Network with Convolutional Layers}
+\frametitle{Learn with Convolutional layers}
 
 \begin{center}
-\includegraphics[width=0.8\linewidth]{../figures/vgg16.png}
+	\includegraphics[width=0.8\linewidth]{../figures/vgg16.png}
 \end{center}
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Layered feature learning}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{../figures/convnet.jpeg}
+	\caption{Taken from \href{http://cs231n.github.io/convolutional-networks/}{here}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{\href{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/}{Terminology}}
+\begin{itemize}
+	\item Convolution operation
+	\item Filter
+	\item Depth
+	\item Stride
+	\item Zero padding (wide and narrow convolution)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Pooling}
+\begin{itemize}
+	\item Makes input representations (feature dimension) smaller and more manageable
+	\item Reduces the number of parameters and computations in the network controlling overfitting
+	\item Makes the network invariant to small transformations, distortions and translations in the input image
+	\item Helps us arriving at an almost scale invariant representation of our image (the exact term is “equivariant”)
+	\item taken from \href{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/}{here}
+	
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Some hints}
+\begin{itemize}
+	\item Compile high quality training set
+	\item Do not overfit!	
+	\item Use pretrained networks to speed up learning process. Keras models can be found \href{https://keras.io/applications/}{here}
+	\item Unfreeze last layers to learn your specific task, fixing the lower layers which extract basic features
+	
+\end{itemize}
+\end{frame}
 
 \begin{frame}
 \frametitle{Results Learning}

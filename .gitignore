@@ -11,5 +11,6 @@ presentations/figures/2d*
 *.bbl
 *.blg
 *.snm
+*.log
 
 
