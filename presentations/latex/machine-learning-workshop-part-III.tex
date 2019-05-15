@@ -128,9 +128,8 @@
 \begin{frame}{Contents}
 \begin{itemize}
 	\item A word on the blackbox
-	\item Pattern recognition with neural networks
+	\item Pattern recognition with neural networks: some work in progress
 	\item Q-Learning
-
 \end{itemize}
 \end{frame}
 
@@ -140,16 +139,26 @@
 %\end{frame}
 %\subsection{Mathematics}
 
+\begin{frame}{A word on the blackbox}
+\begin{itemize}
+	\item \href{https://christophm.github.io/interpretable-ml-book/pdp.html}{Partial dependence plot}: Average effect of one variable on output, over complete parameter space. Shows functional relationship between input and output. Assumption: inputs are all uncorrelated.
+	\item Other methods are available (e.g. Accumulated Local Effects plot, Individual Conditional Expectation)  
+	\item \href{http://lstm.seas.harvard.edu/}{LSTM-Vis}: visualize hidden states of LSTMs. Interesting to understand, what the hidden states may represent. See also \href{https://arxiv.org/pdf/1903.07903.pdf}{this} for an example of what hidden states represent in hydrology.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pattern recognition with neural networks: work in progress}
+\begin{itemize}
+	\item Validating the Global Power Plant Database with satellite fotos...
+	\item Work in progress. Results not extremely promising. Recommendations very much welcome.
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Global Power Plant Database: Need for Validation}
 \center{
 \includegraphics[width=\linewidth]{../figures/wrong_location.png}
 }
-
-
-%Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-%$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-%      = \frac{1}{n}\sum_{i}^{n} X_i$$
-%denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
 
 \end{frame}
 
@@ -414,10 +423,9 @@ see notebook
 \begin{frame}
 \frametitle{Discussion}
 \begin{itemize}
- \item Dates of satellite photos and dates of turbine installations unknown
- \item Shaky legal conditions
+\item Beware: Shaky legal conditions. Also, date of satellite photos unknown.
  \item Runtime prohibitive on desktop computers. For a full global check would need cluster computing with high bandwidth (but see shaky legal conditions...) 
- \item Classification has to be extended to be applicable to different world regions. Applying Austrian/Brazilian conditions to China/France does not work very well (i.e. classification errors).
+ \item Improve classification: need for more negatives which are similiar to positives? How could we derive those? (Currently random sampling of negatives, therefore tiles do not contain a lot of cities or roads...)
 \end{itemize}
 
 \end{frame}
@@ -428,7 +436,7 @@ see notebook
 \begin{frame}
 \frametitle{Conclusions}
 \begin{itemize}
- \item Full validation of GPDB due to missing temporal information not fully possible. However, first assessments of accuracy possible.
+ \item Full validation of GPDB due to missing temporal information not fully possible. 
  \item Current best commercial satellite data allows identification of single turbines with good accuracy by using machine learning approaches
  \item Research limited by Data availability. Public domain data is low resolution (i.e. Sentinel-2) or small spatial domain (free ortho-photos, like basemmap.at).
 \end{itemize}
