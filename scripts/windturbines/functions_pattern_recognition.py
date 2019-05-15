@@ -25,10 +25,16 @@ from keras import backend as K
 from keras import models
 from keras.preprocessing import image
 
+from pathlib import Path
+
 import cv2
 
 def read_params():
-    files = [x for x in os.listdir("config/") if (x.endswith(".csv") and x.startswith("params"))]
+    
+    config_file = Path(__file__).parent.parent.parent / "config"
+    
+    
+    files = [x for x in os.listdir(config_file) if (x.endswith(".csv") and x.startswith("params"))]
     p = {}
     
     countries = []
@@ -37,7 +43,7 @@ def read_params():
         country = i[6:-4]
         countries.append(country)
         
-        p[country] = pd.read_csv("config/" + i)
+        p[country] = pd.read_csv(config_file / i)
     
     return((countries,p))
         
@@ -113,15 +119,24 @@ def cop_predict(f,threshold,raw_dir,temp_dir,dest_dir,model):
 #K.clear_session()
 
 
-def check_image(file, model, filename):
+def load_show_image(file):
     
-    K.clear_session()
-    
-    model = models.load_model("models/simple-model-027-0.988224-1.000000.h5")
-    
-    img_path=file
+    img_path = file
     img = image.load_img(img_path, target_size=(256, 256))
+    imshow(img)
+    
 
+    
+
+def check_image(file, model):
+    
+    #K.clear_session()
+    
+    #model = models.load_model("models/simple-model-027-0.988224-1.000000.h5")
+    
+    img = image.load_img(file, target_size=(256, 256))
+
+    
     #imshow(img)
 
     # `x` is a float32 Numpy array of shape (224, 224, 3)
@@ -131,14 +146,14 @@ def check_image(file, model, filename):
     # of size (1, 224, 224, 3)
     x = np.expand_dims(x, axis=0)
 
-    # Finally we preprocess the batch
+        # Finally we preprocess the batch
     # (this does channel-wise color normalization)
-    #x=image.img_to_array(x)
-    #x=np.expand_dims(x, axis=0)
     x /=255
+    
+    #return()
 
     print(model.predict(x))
-
+ 
     m_out = model.output[:,0]
 
     # The is the output feature map of the `block5_conv3` layer,
@@ -146,18 +161,27 @@ def check_image(file, model, filename):
     last_conv_layer = model.get_layer('conv2d_4')
     #last_conv_layer = model.get_layer("vgg16").get_layer('block5_conv3')
 
+
+
     # This is the gradient of the "african elephant" class with regard to
     # the output feature map of `block5_conv3`
     grads = K.gradients(m_out, last_conv_layer.output)[0]
+
+    
 
     # This is a vector of shape (512,), where each entry
     # is the mean intensity of the gradient over a specific feature map channel
     pooled_grads = K.mean(grads, axis=(0, 1, 2))
 
+    
+
+
     # This function allows us to access the values of the quantities we just defined:
     # `pooled_grads` and the output feature map of `block5_conv3`,
     # given a sample image
     iterate = K.function([model.input], [pooled_grads, last_conv_layer.output[0]])
+
+    
 
     # These are the values of these two quantities, as Numpy arrays,
     # given our sample image of two elephants
@@ -181,9 +205,13 @@ def check_image(file, model, filename):
 
 
     # We use cv2 to load the original image
-    img = cv2.imread(img_path)
-    
+    img = cv2.imread(file)
+    cv2_img = np.array(img) 
+    # Convert RGB to BGR 
+    cv2_img = cv2_img [:, :, ::-1].copy() 
   #  imshow(img)
+  
+      
 
     # We resize the heatmap to have the same size as the original image
     
@@ -211,7 +239,7 @@ def check_image(file, model, filename):
     
     imshow(superimposed_img)
     
-    image.save_img("presentations/figures/"+filename, superimposed_img)
+    #image.save_img("presentations/figures/"+filename, superimposed_img)
 
     # Save the image to disk
     #cv2.imwrite('/Users/fchollet/Downloads/elephant_cam.jpg', superimposed_img)
@@ -228,43 +256,87 @@ def assess_windparks_country(raw_dir, dirs, temp_dir, model, threshold):
         files = [x for x in os.listdir(dir_all) if x.endswith(".tif")]
 
         dir_all_turbines = raw_dir + directory + "/turbines/"
+        dir_no_turbines = raw_dir + directory + "/no_turbines/"
     
 
         shutil.rmtree(dir_all_turbines, ignore_errors=True)
         os.makedirs(dir_all_turbines, exist_ok=True)
 
+        shutil.rmtree(dir_no_turbines, ignore_errors=True)
+        os.makedirs(dir_no_turbines, exist_ok=True)        
         
-        
-        classified_dir = dir_all_turbines    
+        classified_wind_dir = dir_all_turbines    
+        classified_no_wind_dir = dir_no_turbines    
 
         for f in files:
             src = dir_all + f
             dst = temp_dir + f[:-4]+".png"
             
             try:
-                gdal.Translate(dst,src)
-            except:
+                
+                
+                #Open existing dataset
+                src_ds = gdal.Open(src)
+
+                #Open output format driver, see gdal_translate --formats for list
+                format = "PNG"
+                driver = gdal.GetDriverByName(format)
+
+                #Output to new format
+                dst_ds = driver.CreateCopy(dst, src_ds, 0)
+
+                #Properly close the datasets to flush to disk
+                dst_ds = None
+                src_ds = None
+                
+                #gdal.Translate(dst, src, of = "png")
+                print(src)
+                print(dst)
+                
+                # flush file to prevent an error when opening
+                #fo = open(dst, "wb")
+                #fo.flush()
+                #fo.close()
+                
+                image = load(dst) 
+                predict = model.predict(image)[0]
+                print(predict)
+             
+                
+            except Exception as e:
                 print("Exception gdal " + f)
+                print(e)
+              
                 continue
         
             print(src)
             print(dst)
    
     
-            image = load(dst) 
-            predict = model.predict(image)[0]
-            print(predict)
+          
             
-            final_dst = classified_dir + f[:-4] + "_" + str(round(predict[0],3)) + ".png"
-        
+           
             if(predict>threshold):
                 print("windturbine found at "+f[0:-4])
+                final_dst = classified_wind_dir + f[:-4] + "_" + str(round(predict[0],3)) + ".png"
                 element = str.split(f[0:-4],"_")
                 element.append(predict)
                 element.append(f)
                 element.append(directory)
                 lons_lats_found.append(element)
                 shutil.copyfile(dst,final_dst)
+                print(final_dst)
+            else:
+                print("no windturbine found at "+f[0:-4])
+                final_dst = classified_no_wind_dir + f[:-4] + "_" + str(round(predict[0],3)) + ".png"
+                element = str.split(f[0:-4],"_")
+                element.append(predict)
+                element.append(f)
+                element.append(directory)
+                lons_lats_found.append(element)
+                shutil.copyfile(dst,final_dst)
+                print(final_dst)
+                
     
             os.remove(dst)
             os.remove(dst+".aux.xml")
