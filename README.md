@@ -1,4 +1,4 @@
-![MIT License]
+![MIT License](https://img.shields.io/github/license/inwe-boku/wind-repowering-usa.svg)
 
 # Machine Learning Workshop at BOKU-INWE
 
