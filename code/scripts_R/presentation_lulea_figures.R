@@ -3,11 +3,10 @@ library(ggplot2)
 library(zoo)
 
 
-setwd("G:/Meine Ablage/LVA/PhD Lectures/MachineLearningCourse/presentations/scripts")
-
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 erc_colors<-c("#C72321","#6E9B9E")
 
-val_acc<-read_csv2("../data/validation_loss_accuracy_unfreezed_model.csv")
+val_acc<-read_csv2("../../presentations/data/validation_loss_accuracy_unfreezed_model.csv")
 
 for(i in 30:40){
   val_acc[c(i,40),]<-val_acc[29,]
@@ -29,4 +28,4 @@ val_acc_gathered %>% ggplot(aes(x=Epoch,Value))+geom_line(aes(col=Scen),size=1,l
   facet_wrap(Type~.,scales = "free")+
   theme_bw()
 
-ggsave("../figures/accuracy_loss.png")
+ggsave("../../presentations/figures/accuracy_loss.png")

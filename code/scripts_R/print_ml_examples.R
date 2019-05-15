@@ -15,11 +15,11 @@ for(i in 1:5){
   
   figure<-rep(0,16)
   figure[sample(length(figure),4)]<-1
-  png(paste0("../figures/1d_random_supervised_learning_",i,".png"),width=150, height=400)
+  png(paste0("../../presentations/figures/1d_random_supervised_learning_",i,".png"),width=150, height=400)
     plot.sociomatrix(matrix(figure,16,1),drawlab=FALSE,diaglab=FALSE)
   dev.off()
   figure<-matrix(figure,4,4)
-  png(paste0("../figures/2d_random_supervised_learning_",i,".png"),width=400, height=400)
+  png(paste0("../../presentations/figures/2d_random_supervised_learning_",i,".png"),width=400, height=400)
   plot.sociomatrix(figure,drawlab=FALSE,diaglab=FALSE)
   dev.off()
   
@@ -37,11 +37,11 @@ for(i in 1:6){
   
   
   
-  png(paste0("../figures/1d_pattern_supervised_learning_",i,".png"),width=150, height=400)
+  png(paste0("../../presentations/figures/1d_pattern_supervised_learning_",i,".png"),width=150, height=400)
   plot.sociomatrix(matrix(figure,16,1),drawlab=FALSE,diaglab=FALSE)
   dev.off()
   figure<-matrix(figure,4,4)
-  png(paste0("../figures/2d_pattern_supervised_learning_",i,".png"),width=400, height=400)
+  png(paste0("../../presentations/figures/2d_pattern_supervised_learning_",i,".png"),width=400, height=400)
   plot.sociomatrix(figure,drawlab=FALSE,diaglab=FALSE)
   dev.off()
   
@@ -62,7 +62,7 @@ points_green<-points[subsample,]
 
 ggplot(points,aes(x=x,y=y)) + geom_point() +
   geom_point(data=points_green,aes(x=x,y=y),col="green")
-ggsave("../figures/clustering.png")  
+ggsave("../../presentations/figures/clustering.png")  
 
 
 
