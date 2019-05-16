@@ -32,8 +32,13 @@ nosetests.xml
 coverage.xml
 *.cover
 
+*.pyc
+
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
+
+# pycache
+__pycache__/
 
 # VS Code
 .vscode/

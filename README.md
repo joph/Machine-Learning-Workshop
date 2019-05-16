@@ -6,4 +6,22 @@ This material is the basis for the Machine Learning Workshop at BOKU, taking pla
 
 Authors: Johann Baumgartner, [Johannes Schmidt](https://homepage.boku.ac.at/jschmidt)
 
+# Required Packages
+
+numpy
+matplotlib
+sklearn
+keras
+os
+pandas
+scipy
+time
+tensorflow
+imp
+PIL
+skimage
+pathlib
+cv2
+
+
 
